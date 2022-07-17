@@ -1,0 +1,18 @@
+Script started on Wed Dec 25 13:41:12 2019
+[?1034hbash-3.2$ date
+Wed Dec 25 13:41:18 PST 2019
+bash-3.2$ ls -1
+CMakeLists.txt
+Makefile
+cmake-build-debug
+cs1a.ppm
+finalproj.cpp
+finalproj.h
+finalproj.scr
+menu.cpp
+mirrorHoriz.cpp
+mirrorVert.cpp
+negImg.cpp
+readImg.cpp
+saveImg.cpp
+bash-3.2$ 
