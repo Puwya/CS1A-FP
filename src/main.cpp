@@ -4,20 +4,15 @@
 
 #include "../include/Pixel.h"
 
-void PrintMenu();
 void ReadImg(
     Pixel pixel[][WIDTH], std::fstream &inFile, const uint16_t &width,
     const uint16_t &height);
-void SaveImg(
-    Pixel pixel[][WIDTH], std::string &type, const uint16_t &width,
-    const uint16_t &height, const uint16_t &intensity);
-void MirrorHorizontally(
-    Pixel pixel[][WIDTH], const uint16_t &width, const uint16_t &height);
-void MirrorVertically(
-    Pixel pixel[][WIDTH], const uint16_t &width, const uint16_t &height);
-void NegativeImage(Pixel pixel[][WIDTH], const uint16_t &width, const uint16_t &height);
+void Delegation(
+    Pixel pixel[][WIDTH], uint16_t &width, uint16_t &height, uint16_t &intensity,
+    std::string &type);
 
 int main() {
+  std::string FileName;
   std::string type;
   uint16_t width;
   uint16_t height;
@@ -29,9 +24,8 @@ int main() {
   inFile.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 
   Pixel pixel[426][640];
-
   ReadImg(pixel, inFile, width, height);
-  NegativeImage(pixel, width, height);
-  SaveImg(pixel, type, width, height, intensity);
+  inFile.close();
+  Delegation(pixel, width, height, intensity, type);
   return 0;
 }

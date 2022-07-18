@@ -2,7 +2,7 @@
 
 #include "../../include/Pixel.h"
 
-void MirrorHorizontally(
+void MirrorVertically(
     Pixel pixel[][WIDTH], const uint16_t &width, const uint16_t &height) {
   for (int row = 0; row < height; row++) {
     for (int col = width; col > width / 2; col--) {

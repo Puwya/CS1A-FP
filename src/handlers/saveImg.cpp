@@ -7,8 +7,8 @@
 
 void SaveImg(
     Pixel pixel[][WIDTH], std::string &type, const uint16_t &width,
-    const uint16_t &height, const uint16_t &intensity) {
-  std::fstream oFile("Recreated.ppm", std::ios::out);
+    const uint16_t &height, const uint16_t &intensity, const std::string &FileName) {
+  std::fstream oFile(FileName, std::ios::out);
 
   oFile << type << "\n";
   oFile << width << " " << height << "\n";
