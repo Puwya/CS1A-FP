@@ -13,6 +13,8 @@ void SaveImg(
     const uint16_t &height, const uint16_t &intensity);
 void MirrorHorizontally(
     Pixel pixel[][WIDTH], const uint16_t &width, const uint16_t &height);
+void MirrorVertically(
+    Pixel pixel[][WIDTH], const uint16_t &width, const uint16_t &height);
 
 int main() {
   std::string type;
@@ -28,7 +30,7 @@ int main() {
   Pixel pixel[426][640];
 
   ReadImg(pixel, inFile, width, height);
-  MirrorHorizontally(pixel, width, height);
+  MirrorVertically(pixel, width, height);
   SaveImg(pixel, type, width, height, intensity);
   return 0;
 }
