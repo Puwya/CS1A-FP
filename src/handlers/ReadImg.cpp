@@ -1,9 +1,6 @@
 #include <cstdint>
 #include <fstream>
-#include <ios>
 #include <iostream>
-#include <limits>
-#include <string>
 
 #include "../../include/Pixel.h"
 
