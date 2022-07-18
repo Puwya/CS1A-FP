@@ -6,10 +6,13 @@
 
 void PrintMenu();
 void ReadImg(
-    Pixel pixel[][WIDTH], std::fstream &inFile, uint16_t &width, uint16_t &height);
-void saveImg(
-    Pixel pixel[][WIDTH], std::string &type, uint16_t &width, uint16_t &height,
-    uint16_t &intensity);
+    Pixel pixel[][WIDTH], std::fstream &inFile, const uint16_t &width,
+    const uint16_t &height);
+void SaveImg(
+    Pixel pixel[][WIDTH], std::string &type, const uint16_t &width,
+    const uint16_t &height, const uint16_t &intensity);
+void MirrorHorizontally(
+    Pixel pixel[][WIDTH], const uint16_t &width, const uint16_t &height);
 
 int main() {
   std::string type;
@@ -25,6 +28,7 @@ int main() {
   Pixel pixel[426][640];
 
   ReadImg(pixel, inFile, width, height);
-  saveImg(pixel, type, width, height, intensity);
+  MirrorHorizontally(pixel, width, height);
+  SaveImg(pixel, type, width, height, intensity);
   return 0;
 }

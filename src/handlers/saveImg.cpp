@@ -5,9 +5,9 @@
 
 #include "../../include/Pixel.h"
 
-void saveImg(
-    Pixel pixel[][WIDTH], std::string &type, uint16_t &width, uint16_t &height,
-    uint16_t &intensity) {
+void SaveImg(
+    Pixel pixel[][WIDTH], std::string &type, const uint16_t &width,
+    const uint16_t &height, const uint16_t &intensity) {
   std::fstream oFile("Recreated.ppm", std::ios::out);
 
   oFile << type << "\n";

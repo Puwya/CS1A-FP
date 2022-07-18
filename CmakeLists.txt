@@ -7,7 +7,7 @@ project(main)
 
 add_executable(${PROJECT_NAME}
     src/main.cpp src/handlers/PrintMenu.cpp src/handlers/ReadImg.cpp
-    src/handlers/saveImg.cpp)
+    src/handlers/SaveImg.cpp src/logic/MirrorHorizontally.cpp)
 target_include_directories(${PROJECT_NAME} PUBLIC /include)
 
 # Letting CMake find library
